@@ -32,9 +32,9 @@ function! ExportColors(scheme_name, ...)
     let @a=a:scheme_name
     normal ilet g:colors_name=""apa"
 
-    
-
     " Restore registers we used
     let @a = l:a
 
 endfunction
+
+command! -nargs=+ ExportColors call ExportColors(<q-args>)
